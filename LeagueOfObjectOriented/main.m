@@ -17,6 +17,7 @@ int main(int argc, const char * argv[])
         NSLog(@"Hello, World!");
         
         NSLog(@"Minha mensagem personalizada por eduardolomb");
+        NSLog(@"Mais mensagens");
         
         
         
