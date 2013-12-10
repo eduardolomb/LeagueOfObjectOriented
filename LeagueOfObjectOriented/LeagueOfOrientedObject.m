@@ -19,6 +19,7 @@
 }
 
 -(Jogador*)vencedor {
+    //retornar vencedor
     return Nil;
 }
 
