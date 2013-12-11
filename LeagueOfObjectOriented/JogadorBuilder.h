@@ -13,6 +13,7 @@
     @protected
     Jogador *jogador_;
 }
+//
 @property (nonatomic, readonly) Jogador *jogador;
 
 - (JogadorBuilder *) buildNewCharacter;
