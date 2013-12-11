@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C19881218587EA600470635 /* JogadorBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C19881118587EA600470635 /* JogadorBuilder.m */; };
 		1C694DDC185873A8009929B0 /* ArcoeFlecha.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C694DD5185873A8009929B0 /* ArcoeFlecha.m */; };
 		1C694DDD185873A8009929B0 /* Espada.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C694DD7185873A8009929B0 /* Espada.m */; };
 		1C694DDE185873A8009929B0 /* Machado.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C694DD9185873A8009929B0 /* Machado.m */; };
@@ -33,6 +34,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1C19881018587EA600470635 /* JogadorBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JogadorBuilder.h; sourceTree = "<group>"; };
+		1C19881118587EA600470635 /* JogadorBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JogadorBuilder.m; sourceTree = "<group>"; };
 		1C694DD4185873A8009929B0 /* ArcoeFlecha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArcoeFlecha.h; sourceTree = "<group>"; };
 		1C694DD5185873A8009929B0 /* ArcoeFlecha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArcoeFlecha.m; sourceTree = "<group>"; };
 		1C694DD6185873A8009929B0 /* Espada.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Espada.h; sourceTree = "<group>"; };
@@ -111,6 +114,8 @@
 				271F246D1854FBB50024E200 /* Arma.m */,
 				271F246F1854FEDE0024E200 /* LeagueOfOrientedObject.h */,
 				271F24701854FEDE0024E200 /* LeagueOfOrientedObject.m */,
+				1C19881018587EA600470635 /* JogadorBuilder.h */,
+				1C19881118587EA600470635 /* JogadorBuilder.m */,
 			);
 			path = LeagueOfObjectOriented;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 				271F245F1854A34F0024E200 /* main.m in Sources */,
 				271F246E1854FBB50024E200 /* Arma.m in Sources */,
 				1C694DDD185873A8009929B0 /* Espada.m in Sources */,
+				1C19881218587EA600470635 /* JogadorBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

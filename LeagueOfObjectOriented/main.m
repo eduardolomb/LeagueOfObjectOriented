@@ -22,12 +22,17 @@
     {
         
         @autoreleasepool {
+            
+            
             srand((unsigned) time(NULL));
             int raca, armap,armas;
             Arma *arma1 = [Arma new];
             Arma *arma2 = [Arma new];
             Arma *arma3 = [Arma new];
             Arma *arma4 = [Arma new];
+            LeagueOfOrientedObject *l1 = [[LeagueOfOrientedObject alloc] init];
+            JogadorBuilder * jogadorBuilder = [[JogadorBuilder  alloc]init];
+
             NSLog(@"\nPlayer 1: Escolha uma arma principal:");
             NSLog(@"\n0- Arco e flecha\n1-Espada\n2-Magia\n3-Machado");
             scanf("%d",&armap);
@@ -104,7 +109,8 @@
                 default:
                     break;
             }
-             Jogador *player1 = [[Jogador alloc] initWithnome:@"Daniel" andRaca:raca andVida:100 andEscudo:10 andArma1:arma1  andArma2:arma2];
+            Jogador *player1 = [l1 createPlayer:jogadorBuilder com:arma1 e:arma2];
+            //Jogador *player1 = [[Jogador alloc] initWithnome:@"Daniel" andRaca:raca andVida:100 andEscudo:10 andArma1:arma1  andArma2:arma2];
             NSLog(@"\nPlayer 2: Escolha uma arma secundaria:");
             NSLog(@"\n0- Arco e flecha\n1-Espada\n2-Magia\n3-Machado");
             scanf("%d",&armas);
@@ -133,8 +139,11 @@
             scanf("%d",&raca);
             
             
-            Jogador *player2 = [[Jogador alloc] initWithnome:@"Barbara" andRaca:raca andVida:100 andEscudo:10 andArma1:arma3 andArma2:arma4];
-            LeagueOfOrientedObject *l1 = [[LeagueOfOrientedObject alloc] init];
+            
+            
+//            Jogador *player2 = [[Jogador alloc] initWithnome:@"Barbara" andRaca:raca andVida:100 andEscudo:10 andArma1:arma3 andArma2:arma4];
+            
+            Jogador *player2 = [l1 createPlayer:jogadorBuilder com:arma3 e:arma4];
             [l1 jogar:player1 andWith:player2];
             
             

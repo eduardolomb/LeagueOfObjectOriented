@@ -14,11 +14,30 @@
 #import "Machado.h"
 #import "ArcoeFlecha.h"
 #import "LeagueOfOrientedObject.h"
-
+#import "JogadorBuilder.h"
 
 
     
 @implementation LeagueOfOrientedObject
+
+-(Jogador *) createPlayer:(JogadorBuilder *) builder com:(Arma *) arma e:(Arma *) armaDois{
+    [builder buildNewCharacter];
+    [builder withNome:@"Eduardo"];
+    [builder withRaca:3];
+    [builder withVida:100];
+    [builder withForcaescudo:5];
+    [builder withArma:arma e:armaDois];
+    return [builder jogador];
+}
+-(Jogador *) createEnemy:(JogadorBuilder *) builder com:(Arma *) arma e:(Arma *) armaDois{
+    [builder buildNewCharacter];
+    [builder withNome:@"Lombardi"];
+    [builder withRaca:2];
+    [builder withVida:100];
+    [builder withForcaescudo:5];
+    [builder withArma:arma e:armaDois];
+    return [builder jogador];
+}
 
 -(void) jogar:(Jogador *) j1 andWith:(Jogador *)j2
 {
