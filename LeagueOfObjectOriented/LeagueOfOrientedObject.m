@@ -201,6 +201,10 @@
         NSLog(@"\nPlayer 2 venceu!");
 }
 
+-(Jogador*)vencedor {
+    //retornar vencedor
+    return Nil;
+}
 
 
 @end

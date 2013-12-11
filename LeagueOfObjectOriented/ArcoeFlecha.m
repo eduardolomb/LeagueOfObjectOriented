@@ -9,6 +9,8 @@
 #import "ArcoeFlecha.h"
 
 @implementation ArcoeFlecha
+@synthesize quantflechas;
+
 -(NSString *) nome {
     return @"arco e flecha";
 }
@@ -34,5 +36,5 @@
     
     return [j calcAtk]+ 1.0*[self getPrecisaoAtk]*50;
 }
-@synthesize quantflechas;
+
 @end
