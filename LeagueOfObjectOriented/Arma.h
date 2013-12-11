@@ -1,20 +1,20 @@
 //
 //  Arma.h
-//  LeagueOfObjectOriented
+//  LoOO
 //
-//  Created by Vinicius Miana on 12/8/13.
-//  Copyright (c) 2013 Vinicius Miana. All rights reserved.
+//  Created by DANIEL CARVALHO on 11/18/13.
+//  Copyright (c) 2013 DANIEL CARVALHO. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-@class Jogador;
+#import "Jogador.h"
 
-@interface Arma : NSObject {
-    
+@interface Arma : NSObject{
+    float precisaoAtaque;
+    NSString *nome;
 }
-@property (nonatomic) float precisaoDoAtaque;
-
--(double)calcularForcaAtaque:(Jogador*)jogador;
-
+@property (nonatomic,strong) NSString *nome;
+-(double) calcularForcaAtaque:(Jogador *) j;
+-(float) getPrecisaoAtk;
 
 @end

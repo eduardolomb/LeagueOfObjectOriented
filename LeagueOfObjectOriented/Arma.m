@@ -1,21 +1,23 @@
 //
 //  Arma.m
-//  LeagueOfObjectOriented
+//  LoOO
 //
-//  Created by Vinicius Miana on 12/8/13.
-//  Copyright (c) 2013 Vinicius Miana. All rights reserved.
+//  Created by DANIEL CARVALHO on 11/18/13.
+//  Copyright (c) 2013 DANIEL CARVALHO. All rights reserved.
 //
 
 #import "Arma.h"
 
+
 @implementation Arma
-
-
--(double)calcularForcaAtaque:(Jogador*)jogador {
+@synthesize nome;
+-(double)calcularForcaAtaque:(Jogador *)j{
     return 0;
 }
 
+-(float) getPrecisaoAtk{
+    precisaoAtaque = rand()%40 + 60;
+    return (precisaoAtaque/100);
+}
+
 @end
-
-
-
