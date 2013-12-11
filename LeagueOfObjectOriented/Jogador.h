@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Arena.h"
+
 @class Arma;
 @interface Jogador : NSObject{
     NSString *nome;
@@ -24,8 +26,8 @@
 -(Jogador *) initWithnome:(NSString *)n andRaca:(int) r andVida:(float) v andEscudo:(int) f andArma1:(Arma *) a1 andArma2:(Arma *) a2;
 -(NSString *) armap;
 -(NSString *) armas;
--(float) ataque;
--(float) ataque2;
+-(float) ataque :(Arena*)a j:(Jogador*)j;
+-(float) ataque2:(Arena*)a j:(Jogador*)j;
 -(float) sofreAtaque:(double) forca;
 -(float) calcDef;
 -(float) calcAtk;

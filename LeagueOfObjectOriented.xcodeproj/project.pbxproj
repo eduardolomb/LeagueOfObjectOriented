@@ -17,6 +17,7 @@
 		271F246B1854F9B30024E200 /* Jogador.m in Sources */ = {isa = PBXBuildFile; fileRef = 271F246A1854F9B30024E200 /* Jogador.m */; };
 		271F246E1854FBB50024E200 /* Arma.m in Sources */ = {isa = PBXBuildFile; fileRef = 271F246D1854FBB50024E200 /* Arma.m */; };
 		271F24711854FEDE0024E200 /* LeagueOfOrientedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 271F24701854FEDE0024E200 /* LeagueOfOrientedObject.m */; };
+		480244E518587F0800EC1140 /* Arena.m in Sources */ = {isa = PBXBuildFile; fileRef = 480244E418587F0800EC1140 /* Arena.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,8 @@
 		271F246D1854FBB50024E200 /* Arma.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arma.m; sourceTree = "<group>"; };
 		271F246F1854FEDE0024E200 /* LeagueOfOrientedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeagueOfOrientedObject.h; sourceTree = "<group>"; };
 		271F24701854FEDE0024E200 /* LeagueOfOrientedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeagueOfOrientedObject.m; sourceTree = "<group>"; };
+		480244E318587F0800EC1140 /* Arena.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arena.h; sourceTree = "<group>"; };
+		480244E418587F0800EC1140 /* Arena.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arena.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				271F246D1854FBB50024E200 /* Arma.m */,
 				271F246F1854FEDE0024E200 /* LeagueOfOrientedObject.h */,
 				271F24701854FEDE0024E200 /* LeagueOfOrientedObject.m */,
+				480244E318587F0800EC1140 /* Arena.h */,
+				480244E418587F0800EC1140 /* Arena.m */,
 			);
 			path = LeagueOfObjectOriented;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				480244E518587F0800EC1140 /* Arena.m in Sources */,
 				271F24711854FEDE0024E200 /* LeagueOfOrientedObject.m in Sources */,
 				1C694DDF185873A8009929B0 /* Magia.m in Sources */,
 				1C694DDC185873A8009929B0 /* ArcoeFlecha.m in Sources */,

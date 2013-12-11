@@ -22,11 +22,13 @@
 
 -(void) jogar:(Jogador *) j1 andWith:(Jogador *)j2
 {
+    Arena* a = [[Arena alloc]init];
     srand(time(NULL));
     int iniciativa1 = rand()%2;
     double ataque;
     double ataqueEfet;
     int arma;
+    
     if( iniciativa1==0)
     {
         NSLog(@"Player 1 comeca!");
@@ -37,7 +39,7 @@
             scanf("%d",&arma);
             if(arma==1)
             {
-                ataque = [j1 ataque];
+                ataque = [j1 ataque :a j: j1];
                 
                 NSLog(@"Player 1 ataca com %@: %.2f",[j1 armap], ataque);
                 [NSThread sleepForTimeInterval:1.0f];
@@ -50,7 +52,7 @@
             }
             else
             {
-                ataque = [j1 ataque2];
+                ataque = [j1 ataque2 :a j: j1];
                 NSLog(@"Player 1 ataca com %@: %.2f",[j1 armap], ataque);
                 [NSThread sleepForTimeInterval:1.0f];
                 ataqueEfet = [j2 sofreAtaque:ataque];
@@ -68,7 +70,7 @@
             scanf("%d",&arma);
             if(arma ==1)
             {
-                ataque = [j2 ataque];
+                ataque = [j2 ataque :a j: j2];
                 NSLog(@"Player 2 ataca com %@: %.2f",[j2 armap],ataque);
                 [NSThread sleepForTimeInterval:1.0f];
                 ataqueEfet = [j1 sofreAtaque:ataque];
@@ -81,7 +83,7 @@
             }
             else
             {
-                ataque = [j2 ataque2];
+                ataque = [j2 ataque2 :a j: j2];
                 NSLog(@"Player 2 ataca com %@: %.2f",[j2 armap],ataque);
                 [NSThread sleepForTimeInterval:1.0f];
                 ataqueEfet = [j1 sofreAtaque:ataque];
@@ -108,7 +110,7 @@
             scanf("%d",&arma);
             if(arma ==1)
             {
-                ataque = [j2 ataque];
+                ataque = [j2 ataque :a j: j2];
                 NSLog(@"Player 2 ataca com %@: %.2f",[j2 armap], ataque);
                 [NSThread sleepForTimeInterval:1.0f];
                 ataqueEfet = [j1 sofreAtaque:ataque];
@@ -124,7 +126,7 @@
             }
             else
             {
-                ataque = [j2 ataque2];
+                ataque = [j2 ataque2 :a j: j2];
                 NSLog(@"Player 2 ataca com %@: %.2f",[j2 armas], ataque);
                 [NSThread sleepForTimeInterval:1.0f];
                 ataqueEfet = [j1 sofreAtaque:ataque];
@@ -143,7 +145,7 @@
             scanf("%d",&arma);
             if(arma==1)
             {
-                ataque = [j1 ataque];
+                ataque = [j1 ataque :a j: j1];
                 NSLog(@"Player 1 ataca com %@: %.2f",[j1 armap],ataque);
                 [NSThread sleepForTimeInterval:1.0f];
                 ataqueEfet = [j2 sofreAtaque:ataque];
@@ -159,7 +161,7 @@
             }
             else
             {
-                ataque = [j1 ataque2];
+                ataque = [j1 ataque2 :a j: j1];
                 NSLog(@"Player 2 ataca com %@: %.2f",[j2 armas], ataque);
                 [NSThread sleepForTimeInterval:1.0f];
                 ataqueEfet = [j2 sofreAtaque:ataque];

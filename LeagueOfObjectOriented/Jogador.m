@@ -12,6 +12,7 @@
 #import "Machado.h"
 #import "Magia.h"
 #import "ArcoeFlecha.h"
+#import "Arena.h"
 
 @implementation Jogador
 static int ELFO=0;
@@ -54,14 +55,14 @@ static int ANAO=3;
 -(NSString *) armas {
     return [self.armaSecundaria nome];
 }
--(float) ataque{
+-(float) ataque : (Arena*)a j:(Jogador*)j{
     
-    return  [self.armaPrimaria calcularForcaAtaque:self];
+    return  [self.armaPrimaria calcularForcaAtaque:self]*[a calcularBonusArena:j];
 }
 
--(float) ataque2{
+-(float) ataque2: (Arena*)a j:(Jogador*)j{
     
-    return  [self.armaSecundaria calcularForcaAtaque:self]*0.8;
+    return  [self.armaSecundaria calcularForcaAtaque:self]*0.8*[a calcularBonusArena:j];
 }
 
 -(float) sofreAtaque:(double)forca {
