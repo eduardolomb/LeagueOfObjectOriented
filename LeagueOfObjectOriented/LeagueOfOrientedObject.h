@@ -8,11 +8,12 @@
 
 
 #import <Foundation/Foundation.h>
-
+#import "JogadorBuilder.h"
 
 @interface LeagueOfOrientedObject : NSObject
     
 -(void) jogar:(Jogador *) j1 andWith:(Jogador *)j2;
-
+-(Jogador *) createPlayer:(JogadorBuilder *) builder com:(Arma *) arma e:(Arma *) armaDois;
+-(Jogador *) createEnemy:(JogadorBuilder *) builder com: (Arma *) arma e:(Arma *) armaDois;
 @end
 

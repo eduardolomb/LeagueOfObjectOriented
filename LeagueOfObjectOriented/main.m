@@ -16,74 +16,55 @@
 #import <time.h>
 
 
+void retornarMsg(int player, NSString *tipoArma){
+    NSLog(@"\nPlayer %d: Escolha uma arma %@:", player, tipoArma);
+    NSLog(@"\n0- Arco e flecha\n1-Espada\n2-Magia\n3-Machado");
+}
+
+void retornarMsgRaca(int player){
+    NSLog(@"\nPlayer %d: Escolha uma raca:", player);
+    NSLog(@"\n0-ELFO \n1-HUMANO\n2-ORC\n3-ANAO");
+}
+
 
 
     int main(int argc, const char * argv[])
     {
         
         @autoreleasepool {
+            
+            
             srand((unsigned) time(NULL));
             int raca, armap,armas;
             Arma *arma1 = [Arma new];
             Arma *arma2 = [Arma new];
             Arma *arma3 = [Arma new];
             Arma *arma4 = [Arma new];
+
+            LeagueOfOrientedObject *l1 = [[LeagueOfOrientedObject alloc] init];
+            JogadorBuilder * jogadorBuilder = [[JogadorBuilder  alloc]init];
+
             NSLog(@"\nPlayer 1: Escolha uma arma principal:");
             NSLog(@"\n0- Arco e flecha\n1-Espada\n2-Magia\n3-Machado");
+
+            
+            retornarMsg(1, @"principal");
+
             scanf("%d",&armap);
-            switch (armap) {
-                case 0: {
-                    arma1 = [[ArcoeFlecha alloc] initWithflechas:10];
-                    break;
-                }
-                case 1: {
-                   arma1 = [[Espada alloc] initWithForca:100 andDesgaste:10];
-                    break;
-                }
-                case 2: {
-                    arma1  = [[Magia alloc] initWithSkill:10];
-                    break;
-                }
-                case 3: {
-                    arma1 = [[Machado alloc] initWithForca:130 andDesgaste:20];
-                    break;
-                }
-                default:
-                    break;
-            }
+            arma1 = [Arma obterFactory:armap];
             
-            NSLog(@"\nPlayer 1: Escolha uma arma secundaria:");
-            NSLog(@"\n0- Arco e flecha\n1-Espada\n2-Magia\n3-Machado");
+            retornarMsg(1, @"secundaria");
             scanf("%d",&armas);
-            switch (armas) {
-                case 0: {
-                    arma2 = [[ArcoeFlecha alloc] initWithflechas:10];
-                    break;
-                }
-                case 1: {
-                    arma2 = [[Espada alloc] initWithForca:100 andDesgaste:10];
-                    break;
-                }
-                case 2: {
-                    arma2  = [[Magia alloc] initWithSkill:10];
-                    break;
-                }
-                case 3: {
-                    arma2 = [[Machado alloc] initWithForca:130 andDesgaste:20];
-                    break;
-                }
-                default:
-                    break;
-            }
-            
-            NSLog(@"\nPlayer 1: Escolha uma raca:");
-            NSLog(@"\n0-ELFO \n1-HUMANO\n2-ORC\n3-ANAO");
+            arma2 = [Arma obterFactory:armas];
+     
+            retornarMsgRaca(1);
             scanf("%d",&raca);
             
+            //Jogador *player1 = [[Jogador alloc] initWithnome:@"Daniel" andRaca:raca andVida:100 andEscudo:10 andArma1:arma1  andArma2:arma2];
             
-            NSLog(@"\nPlayer 2: Escolha uma arma principal:");
-            NSLog(@"\n0- Arco e flecha\n1-Espada\n2-Magia\n3-Machado");
+            retornarMsg(2, @"principal");
             scanf("%d",&armap);
+
             switch (armap) {
                 case 0: {
                     arma3 = [[ArcoeFlecha alloc] initWithflechas:10];
@@ -104,42 +85,40 @@
                 default:
                     break;
             }
-             Jogador *player1 = [[Jogador alloc] initWithnome:@"Daniel" andRaca:raca andVida:100 andEscudo:10 andArma1:arma1  andArma2:arma2];
+            Jogador *player1 = [l1 createPlayer:jogadorBuilder com:arma1 e:arma2];
+            //Jogador *player1 = [[Jogador alloc] initWithnome:@"Daniel" andRaca:raca andVida:100 andEscudo:10 andArma1:arma1  andArma2:arma2];
             NSLog(@"\nPlayer 2: Escolha uma arma secundaria:");
             NSLog(@"\n0- Arco e flecha\n1-Espada\n2-Magia\n3-Machado");
+
+            arma3 = [Arma obterFactory:armap];
+            
+            retornarMsg(2, @"secundaria");
+
             scanf("%d",&armas);
-            switch (armas) {
-                case 0: {
-                    arma4 = [[ArcoeFlecha alloc] initWithflechas:10];
-                    break;
-                }
-                case 1: {
-                    arma4 = [[Espada alloc] initWithForca:100 andDesgaste:0];
-                    break;
-                }
-                case 2: {
-                    arma4  = [[Magia alloc] initWithSkill:10];
-                    break;
-                }
-                case 3: {
-                    arma4 = [[Machado alloc] initWithForca:100 andDesgaste:0];
-                    break;
-                }
-                default:
-                    break;
-            }
-            NSLog(@"\nPlayer 2: Escolha uma raca:");
-            NSLog(@"\n0-ELFO \n1-HUMANO\n2-ORC\n3-ANAO");
+            arma4 = [Arma obterFactory:armas];
+
+            retornarMsgRaca(2);
             scanf("%d",&raca);
             
             
-            Jogador *player2 = [[Jogador alloc] initWithnome:@"Barbara" andRaca:raca andVida:100 andEscudo:10 andArma1:arma3 andArma2:arma4];
-            LeagueOfOrientedObject *l1 = [[LeagueOfOrientedObject alloc] init];
+
+            
+            
+//            Jogador *player2 = [[Jogador alloc] initWithnome:@"Barbara" andRaca:raca andVida:100 andEscudo:10 andArma1:arma3 andArma2:arma4];
+            
+            Jogador *player2 = [l1 createPlayer:jogadorBuilder com:arma3 e:arma4];
+
+            //Jogador *player2 = [[Jogador alloc] initWithnome:@"Barbara" andRaca:raca andVida:100 andEscudo:10 andArma1:arma3 andArma2:arma4];
+            //LeagueOfOrientedObject *l1 = [[LeagueOfOrientedObject alloc] init];
+            
+
             [l1 jogar:player1 andWith:player2];
             
             
         }
         return 0;
     }
+
+
 
 
