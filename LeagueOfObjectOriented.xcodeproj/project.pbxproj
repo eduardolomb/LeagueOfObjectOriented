@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C694DDC185873A8009929B0 /* ArcoeFlecha.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C694DD5185873A8009929B0 /* ArcoeFlecha.m */; };
+		1C694DDD185873A8009929B0 /* Espada.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C694DD7185873A8009929B0 /* Espada.m */; };
+		1C694DDE185873A8009929B0 /* Machado.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C694DD9185873A8009929B0 /* Machado.m */; };
+		1C694DDF185873A8009929B0 /* Magia.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C694DDB185873A8009929B0 /* Magia.m */; };
 		271F245C1854A34F0024E200 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271F245B1854A34F0024E200 /* Foundation.framework */; };
 		271F245F1854A34F0024E200 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 271F245E1854A34F0024E200 /* main.m */; };
 		271F24631854A34F0024E200 /* LeagueOfObjectOriented.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 271F24621854A34F0024E200 /* LeagueOfObjectOriented.1 */; };
@@ -29,6 +33,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1C694DD4185873A8009929B0 /* ArcoeFlecha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArcoeFlecha.h; sourceTree = "<group>"; };
+		1C694DD5185873A8009929B0 /* ArcoeFlecha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArcoeFlecha.m; sourceTree = "<group>"; };
+		1C694DD6185873A8009929B0 /* Espada.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Espada.h; sourceTree = "<group>"; };
+		1C694DD7185873A8009929B0 /* Espada.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Espada.m; sourceTree = "<group>"; };
+		1C694DD8185873A8009929B0 /* Machado.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Machado.h; sourceTree = "<group>"; };
+		1C694DD9185873A8009929B0 /* Machado.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Machado.m; sourceTree = "<group>"; };
+		1C694DDA185873A8009929B0 /* Magia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Magia.h; sourceTree = "<group>"; };
+		1C694DDB185873A8009929B0 /* Magia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Magia.m; sourceTree = "<group>"; };
 		271F24581854A34F0024E200 /* LeagueOfObjectOriented */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeagueOfObjectOriented; sourceTree = BUILT_PRODUCTS_DIR; };
 		271F245B1854A34F0024E200 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		271F245E1854A34F0024E200 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +95,14 @@
 			isa = PBXGroup;
 			children = (
 				271F245E1854A34F0024E200 /* main.m */,
+				1C694DD4185873A8009929B0 /* ArcoeFlecha.h */,
+				1C694DD5185873A8009929B0 /* ArcoeFlecha.m */,
+				1C694DD6185873A8009929B0 /* Espada.h */,
+				1C694DD7185873A8009929B0 /* Espada.m */,
+				1C694DD8185873A8009929B0 /* Machado.h */,
+				1C694DD9185873A8009929B0 /* Machado.m */,
+				1C694DDA185873A8009929B0 /* Magia.h */,
+				1C694DDB185873A8009929B0 /* Magia.m */,
 				271F24621854A34F0024E200 /* LeagueOfObjectOriented.1 */,
 				271F24601854A34F0024E200 /* Supporting Files */,
 				271F24691854F9B30024E200 /* Jogador.h */,
@@ -155,9 +175,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				271F24711854FEDE0024E200 /* LeagueOfOrientedObject.m in Sources */,
+				1C694DDF185873A8009929B0 /* Magia.m in Sources */,
+				1C694DDC185873A8009929B0 /* ArcoeFlecha.m in Sources */,
 				271F246B1854F9B30024E200 /* Jogador.m in Sources */,
+				1C694DDE185873A8009929B0 /* Machado.m in Sources */,
 				271F245F1854A34F0024E200 /* main.m in Sources */,
 				271F246E1854FBB50024E200 /* Arma.m in Sources */,
+				1C694DDD185873A8009929B0 /* Espada.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +261,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LeagueOfObjectOriented/LeagueOfObjectOriented-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -246,6 +271,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LeagueOfObjectOriented/LeagueOfObjectOriented-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -269,6 +295,7 @@
 				271F24681854A34F0024E200 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
