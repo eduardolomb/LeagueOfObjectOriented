@@ -16,6 +16,7 @@
 #import <time.h>
 
 
+<<<<<<< HEAD
 
     int main(int argc, const char * argv[])
     {
@@ -139,6 +140,17 @@
             
         }
         return 0;
+=======
+    @autoreleasepool {
+        
+        // insert code here...
+        NSLog(@"Hello, World!");
+        NSLog(@"To com fome!!!");
+        
+        // !
+        //coments
+
+>>>>>>> 213a5cb89c4979231006f185f01de7f31da38404
     }
 
 
